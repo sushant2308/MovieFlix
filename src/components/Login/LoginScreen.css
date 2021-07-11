@@ -1,0 +1,83 @@
+.loginscreen {
+    position: relative;
+    height: 100%;
+    background: url("http://mppmduse2pmpovwapp.azurewebsites.net/wp-content/uploads/2019/09/netflix-background-9.jpg") center no-repeat;
+    background-size:cover;
+
+}
+.loginscreen-gradient{
+    width:100%;
+    z-index: 1;
+    height:100vh;
+    background:rgba(0,0,0,0.4);
+    background-image:linear-gradient(to bottom, rgba(0,0,0,0.8) 0, rgba(0,0,0,0) 60%, rgba(0,0,0,0) 100%);
+}
+
+.loginscreen-logo{
+    position:fixed;
+    left:0;
+    width:150px;
+    object-fit:contain;
+    padding-left:20px;
+}
+.loginscreen-button{
+    position:fixed;
+    top:20px;
+    right:20px;
+    padding:10px 20px;
+    font-size:1rem;
+    color:black;
+    background-color: #68f8ee;
+    font-weight:600;
+    border:none;
+    cursor:pointer;
+}
+
+.loginscreen-body {
+    z-index: 1;
+    color: white;
+    position: fixed;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+}
+
+.loginscreen-body > h1 {
+    font-size: 3.125rem;
+    margin-bottom: 20px;
+}
+
+.loginscreen-body > h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.loginscreen-body > h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.loginscreen-input {
+    margin: 20px;
+}
+
+.loginscreen-input> form > input {
+    padding: 10px;
+    outline: none;
+    height: 30px;
+    width: 30%;
+    border: none;
+    max-width: 600px;
+}
+
+.loginscreen-input-button {
+    font-size: 1rem;
+    padding: 16px 20px;
+    color: black;
+    background-color: #68f8ee;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    cursor: pointer;
+}
