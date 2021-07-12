@@ -1,11 +1,13 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { Redirect,useHistory } from 'react-router-dom'
 import { selectUser } from '../../features/userSlice'
 import { auth } from '../../firebase'
 import Navbar from '../HomeScreen/Navbar'
 import './Profile.css'
 function Profile() {
     const user= useSelector(selectUser)
+    const history = useHistory()
     return (
         <div className='profile'>
             <Navbar/>
@@ -16,8 +18,8 @@ function Profile() {
                     <div className="profile-detail">
                         <h2>{user.email}</h2>
                         <div className="profile-plans">
-                            <h3>plans</h3>
-                            <button onClick={()=> auth.signOut()} className="profile-signout">Sign Out</button>
+                            <h3>More to come here....</h3>
+                            <button onClick={()=> {history.push("/");auth.signOut()}} className="profile-signout">Sign Out</button>
                         </div>
                     </div>
                 </div>

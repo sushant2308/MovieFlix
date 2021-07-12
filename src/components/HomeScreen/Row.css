@@ -2,7 +2,16 @@
     color: white;
     margin-left: 20px;
   }
-  
+h2 {
+    display: flex;
+    flex-direction: row;
+}
+h2:before,h2:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 2px solid #5BD7CB;
+    margin: auto;
+}  
 .row-posters {
   display: flex;
   overflow-y: hidden;
@@ -14,12 +23,12 @@
 
 
 .row-posters::-webkit-scrollbar {
-  height: 4px;
+  display: none;
 }
 
 /* Track */
 .row-posters::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  
 }
 
 /* Handle */

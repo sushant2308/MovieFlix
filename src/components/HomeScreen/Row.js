@@ -8,7 +8,7 @@ const base_url = "https://image.tmdb.org/t/p/original/";
 const youtube_api_key="AIzaSyAWPUN4oAHQpUUqqSRZTQj7lbtQODEvDMQ"
 function Row({ title, fetchUrl, isLargeRow }) {
     const [movies, setMovies] = useState([]);
-    const [trailerUrl, setTrailerUrl] = useState("");
+    const [trailerUrl, setTrailerUrl] = useState(null);
 
       // A snippet of code which runs based on a specific condition/variable
     useEffect(() => {
@@ -32,7 +32,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
     const handleClick = (movie) => {
         console.log(movie)
         if(trailerUrl){
-            setTrailerUrl("")
+            setTrailerUrl(null)
         }
         else{
             YTSearch({key: youtube_api_key, term: movie.name}, (videos) => {
