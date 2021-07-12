@@ -8,18 +8,33 @@
   overflow-y: hidden;
   overflow-x: scroll;
   padding: 20px;
+  margin-top: 1rem;
+  
 }
 
+
 .row-posters::-webkit-scrollbar {
-  display: none;
+  height: 4px;
 }
+
+/* Track */
+.row-posters::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.row-posters::-webkit-scrollbar-thumb {
+  background: #5BD7CB;
+}
+
 
 .row-poster {
   object-fit: contain;
   width: 100%;
-  max-height: 100px;
+  max-height: 175px;
   margin-right: 10px;
-  transition: transform 250ms;
+
+  transition: transform 450ms;
 }
 
 .row-poster:hover {
@@ -28,7 +43,7 @@
 }
 
 .row-posterLarge {
-  max-height: 250px;
+  max-height: 300px;
 }
 
 .row-posterLarge:hover {

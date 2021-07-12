@@ -1,8 +1,9 @@
 import React,{ useState,useEffect} from 'react'
 import './Navbar.css'
 import logo from  './images/WHITE.png'
+import { useHistory } from 'react-router-dom'
 function Navbar() {
-
+    const history = useHistory()
     const [show,handleshow] = useState(false)
     const transitionshow = () => {
         if(window.screenY >100){
@@ -22,7 +23,7 @@ function Navbar() {
         <div className={`nav ${show && "nav-black"}`}> 
             <div className="nav-content">
                 <img className="nav-logo" src={logo} alt="logo"/>
-                <img  className="nav-avatar" src="https://cdn.icon-icons.com/icons2/2643/PNG/512/male_boy_person_people_avatar_icon_159358.png" alt="male_boy_person_people_avatar_icon_159358"/>
+                <img  onClick={()=> history.push("/profile")} className="nav-avatar" src="https://toppng.com/uploads/preview/cool-avatar-transparent-image-cool-boy-avatar-11562893383qsirclznyw.png" alt="male_boy_person_people_avatar_icon_159358"/>
             </div>
             
         </div>
